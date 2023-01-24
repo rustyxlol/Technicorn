@@ -5,6 +5,11 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
+@app.route("/", methods=["GET"])
+def homepage():
+    return "The API works"
+
+
 @app.route("/users", methods=["GET"])
 def get_users():
     users = users_api.get_users()
