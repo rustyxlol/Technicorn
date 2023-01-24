@@ -1,6 +1,6 @@
-from flask import Flask, jsonify, request
 import users_api
 from init_db import create_tables
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
