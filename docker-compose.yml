@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: technicorn-docked
+    ports: 
+      - "8000:8000"
+    restart: always
+    networks:
+      - devnet
+    
+networks:
+  devnet:
